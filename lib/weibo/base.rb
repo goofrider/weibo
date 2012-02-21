@@ -175,6 +175,20 @@ module Weibo
     end
 
 
+    # users/hot
+    # Options: category
+    def user_hot(query={})
+      perform_get("/users/hot.json", :query => query)
+    end
+
+    # users/suggestions  (beta)
+    # Options: with_reason
+    def user_suggestions(query={})
+      perform_get("/users/suggestions.json", :query => query)
+    end
+
+
+
     # direct_messages 我的私信列表
     # Options: since, since_id, page
     def direct_messages(query={})
